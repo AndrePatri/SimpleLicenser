@@ -17,13 +17,13 @@ Supported licenses:
 - MIT License: One of the most open and permissive licenses. Allows for almost unrestricted freedom as long as the original license and copyright notice are included with any substantial portions of the software.
 - GNU General Public License (GPL): Requires that modified versions of the project also be open-source and distributed under the GPL license.
 
-    GPLv2: The second version of the GNU GPL.
-    GPLv3: Introduces additional permissions and protections from tivoization.
+    - GPLv2: The second version of the GNU GPL.
+    - GPLv3: Introduces additional permissions and protections from tivoization.
 - Apache 2.0: Similar to the MIT License with additional clauses concerning patent rights.
 - BSD: There are mainly two types of BSD licenses:
 
-    BSD 2-Clause License: Very permissive, similar to the MIT license.
-    BSD 3-Clause License: Adds a clause against using the name of the project or its contributors without permission.
+    - BSD 2-Clause License: Very permissive, similar to the MIT license.
+    - BSD 3-Clause License: Adds a clause against using the name of the project or its contributors without permission.
 - GNU Lesser General Public License (LGPL): Similar to GPL, but allows linking to proprietary modules. It comes in two main versions:
 
     - LGPLv2.1
