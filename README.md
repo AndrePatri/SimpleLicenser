@@ -11,7 +11,7 @@ Headers are automatically added with the right comment characters for most used 
 
 Preexisting licences are checked using either a default keyword or the full licences. By default, the search is based on the keyword approach, but you can enable exact search with the argument `--check_exact`.
 
-Optionally, you can exclude given patterns from the licence with `--exclude_paths path1 path2 .. . pathN`.
+Optionally, you can exclude given patterns from the licence with `--exclude_patterns pattern1 pattern2 ... patternN`.
 
 Supported licenses: 
 - MIT License: One of the most open and permissive licenses. Allows for almost unrestricted freedom as long as the original license and copyright notice are included with any substantial portions of the software.

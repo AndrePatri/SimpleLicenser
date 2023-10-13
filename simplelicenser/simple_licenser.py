@@ -1,33 +1,4 @@
-# Copyright (C) 2023, AndrePatri
-# All rights reserved.
-# 
-# This file is part of SimpleLicenser and distributed under the BSD 3-Clause License.
-# 
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are met:
-# 
-# 1. Redistributions of source code must retain the above copyright notice, this
-#    list of conditions and the following disclaimer.
-# 
-# 2. Redistributions in binary form must reproduce the above copyright notice,
-#    this list of conditions and the following disclaimer in the documentation
-#    and/or other materials provided with the distribution.
-# 
-# 3. Neither the name of the copyright holder nor the names of its
-#    contributors may be used to endorse or promote products derived from
-#    this software without specific prior written permission.
-# 
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-# 
+
 import os
 import shutil
 import argparse
@@ -83,11 +54,11 @@ COMMENT_CHARS = {
 # Keyword to recognize licenses
 LICENSE_KEYWORD = "Copyright (C)"
 
-# Keyword to recognize licenses
+# default patterns excluded from license header addition
 LICENSE_EXCLUDEPATHS = ["__init__" # python packages
                     ]
 
-# Supported license headers
+# supported license headers
 LICENSE_HEADERS = {
     "GPLv2": """ {year}  {authors}
 
@@ -425,7 +396,7 @@ def main(license_key,
         extensions, 
         create_backup=False, 
         exact_check=False, 
-        exclude_paths = []):
+        exclude_patterns = []):
 
     year = datetime.now().year
 
@@ -449,11 +420,11 @@ def main(license_key,
 
             exclude = False
 
-            for exclude_path in exclude_paths:
+            for exclude_pattern in exclude_patterns:
 
-                if bool(re.search(exclude_path, filename)):
+                if bool(re.search(exclude_pattern, filename)):
                     
-                    message = f"Skipping {file} since it matches exclusion pattern {exclude_path}"
+                    message = f"Skipping {file} since it matches exclusion pattern {exclude_pattern}"
 
                     print(message)
 
@@ -512,7 +483,7 @@ if __name__ == "__main__":
     parser.add_argument('--check_exact', action='store_true',
                         help='Checks if an license with same authors, project and year was already added.')
     
-    parser.add_argument('--exclude_paths', nargs='+', default=LICENSE_EXCLUDEPATHS, 
+    parser.add_argument('--exclude_patterns', nargs='+', default=LICENSE_EXCLUDEPATHS, 
                         help='Patterns used to exlude given files.')
     
     args = parser.parse_args()
@@ -524,4 +495,4 @@ if __name__ == "__main__":
         args.extensions, 
         args.create_backup, 
         args.check_exact, 
-        args.exclude_paths)
+        args.exclude_patterns)
