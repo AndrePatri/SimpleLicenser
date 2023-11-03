@@ -1,4 +1,12 @@
-### SimpleLicenser
+<center> 
+
+### SimpleLicenser 
+
+</center>
+
+<center>
+<img src="simplelicenser/docs/icon.svg" width="100px" height="auto">
+</center>
 
 First, add a licence to your project following the instructions [here](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository).
 
