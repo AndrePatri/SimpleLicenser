@@ -7,6 +7,13 @@ This "package" holds a simple but effective script to automate this otherwise te
 
 Usage example: `python simplelicenser/simple_licenser.py --license_key=GPLv2 --project_name={YourProject} --authors="John Doe and Jane Doe" --root_path=/{path_to_your_files} --extensions .js .py .cpp`
 
+Arguments: 
+- `--license_key`: alias for the license typo to be used (check the script)
+- `--project_name`: the name of your project. This will be added to the license header
+- `--authors`: list of authors of the project
+- `--root_path`: root path from which SimpleLicenser will recursively search for files
+- `--extensions`: will be used by SimpleLicenser to selectively apply license headers (look at the script for supported ones)
+
 Headers are automatically added with the right comment characters for most used programming languages. Feel free to add missing ones by creating a pull request.
 
 Preexisting licences are checked using either a default keyword or the full licences. By default, the search is based on the keyword approach, but you can enable exact search with the argument `--check_exact`.
@@ -37,4 +44,4 @@ As a side note, when choosing a license, consider the following aspects:
 - Use of third-party code: If you're using other open-source libraries, their licenses might dictate your project's license.
 - Corporate/organizational policies: Sometimes, your employer or stakeholder might have policies dictating license choice.
 
-You can utilize tools like [ChooseALicense.com](ChooseALicense.com) to help guide you to a license that suits your intent and project needs.
+You can utilize tools like [ChooseALicense](ChooseALicense.com) to help guide you to a license that suits your intent and project needs.
