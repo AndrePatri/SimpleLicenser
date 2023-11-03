@@ -44,4 +44,4 @@ As a side note, when choosing a license, consider the following aspects:
 - Use of third-party code: If you're using other open-source libraries, their licenses might dictate your project's license.
 - Corporate/organizational policies: Sometimes, your employer or stakeholder might have policies dictating license choice.
 
-You can utilize tools like [ChooseALicense](ChooseALicense.com) to help guide you to a license that suits your intent and project needs.
+You can utilize tools like [ChooseALicense](https://choosealicense.com/) to help guide you to a license that suits your intent and project needs.
