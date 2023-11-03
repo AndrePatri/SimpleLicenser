@@ -8,11 +8,11 @@ This "package" holds a simple but effective script to automate this otherwise te
 Usage example: `python simplelicenser/simple_licenser.py --license_key=GPLv2 --project_name={YourProject} --authors="John Doe and Jane Doe" --root_path=/{path_to_your_files} --extensions .js .py .cpp`
 
 Arguments: 
-- `--license_key`: alias for the license typo to be used (check the script)
+- `--license_key`: alias for the license type to be used (check the script)
 - `--project_name`: the name of your project. This will be added to the license header
 - `--authors`: list of authors of the project
 - `--root_path`: root path from which SimpleLicenser will recursively search for files
-- `--extensions`: will be used by SimpleLicenser to selectively apply license headers (look at the script for supported ones)
+- `--extensions`: list of extensions used by SimpleLicenser to selectively apply license headers (look at the script for supported ones)
 
 Headers are automatically added with the right comment characters for most used programming languages. Feel free to add missing ones by creating a pull request.
 
