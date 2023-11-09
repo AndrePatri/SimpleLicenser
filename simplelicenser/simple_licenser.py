@@ -30,6 +30,8 @@ COMMENT_CHARS = {
     '.c': ('//', ''),          # C
     '.hpp': ('//', ''),        # C++ Header
     '.h': ('//', ''),          # C Header
+    '.cmake': ('#', ''),       # CMake
+    '.cmake.in': ('#', ''),    # CMake
     '.sh': ('#', ''),          # Shell Script
     '.java': ('//', ''),       # Java
     '.rb': ('#', ''),          # Ruby
