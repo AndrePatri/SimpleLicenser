@@ -13,6 +13,8 @@ First, add a licence to your project following the instructions [here](https://d
 After having done that, it is good practice to also add a header to each code file in you project, so that from individual code is always possible to go back to the original licence. 
 This "package" holds a simple but effective script to automate this otherwise tedious procedure.
 
+First of all, it is recommened you first backup you data or, alternatively, use Git; this way, in case of unexpected behaviour, you can always revert the changes.
+
 Usage example: `python simplelicenser/simple_licenser.py --license_key=GPLv2 --project_name={YourProject} --authors="John Doe and Jane Doe" --root_path=/{path_to_your_files} --extensions .js .py .cpp`
 
 Arguments: 
